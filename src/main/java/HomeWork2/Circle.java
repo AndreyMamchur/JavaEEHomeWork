@@ -1,6 +1,6 @@
 package HomeWork2;
 
-public class Circle implements CalculateAreaOfTheFigure {
+public class Circle extends Figure {
     private double radius;
     private Rectangle rectangle;
     private Triangle triangle;
@@ -52,7 +52,15 @@ public class Circle implements CalculateAreaOfTheFigure {
                 '}';
     }
 
-    public double calculateAreaOfTheFigure() {
+    public double calculateAreaOfTheFullFigure() {
         return Math.PI*Math.pow(radius, 2);
+    }
+
+    public double calculateAreaOfTheFigure() {
+        return (calculateAreaOfTheFullFigure() - rectangle.calculateAreaOfTheFigure() - triangle.calculateAreaOfTheFigure());
+    }
+
+    public void init(){
+        System.out.println("I’m a Circle");
     }
 }

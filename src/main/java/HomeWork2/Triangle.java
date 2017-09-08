@@ -1,6 +1,6 @@
 package HomeWork2;
 
-public class Triangle implements CalculateAreaOfTheFigure {
+public class Triangle extends Figure {
     private double lengthOfSide1;
     private double lengthOfSide2;
     private double lengthOfSide3;
@@ -62,8 +62,16 @@ public class Triangle implements CalculateAreaOfTheFigure {
                 '}';
     }
 
-    public double calculateAreaOfTheFigure() {
+    public double calculateAreaOfTheFullFigure() {
         double p = (lengthOfSide1 + lengthOfSide2 + lengthOfSide3)/2;
         return Math.sqrt(p*(p-lengthOfSide1)*(p-lengthOfSide2)*(p-lengthOfSide3));
+    }
+
+    public double calculateAreaOfTheFigure() {
+        return (calculateAreaOfTheFullFigure()-rectangle.calculateAreaOfTheFigure()/2);
+    }
+
+    public void init(){
+        System.out.println("I’m a Triangle");
     }
 }

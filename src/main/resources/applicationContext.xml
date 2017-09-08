@@ -3,4 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="rectangle" class="HomeWork2.Rectangle" init-method="init">
+        <property name="length" value="4"/>
+        <property name="width" value="5"/>
+    </bean>
+
+    <bean id="triangle" class="HomeWork2.Triangle" init-method="init">
+        <property name="lengthOfSide1" value="6"/>
+        <property name="lengthOfSide2" value="9"/>
+        <property name="lengthOfSide3" value="4"/>
+        <constructor-arg name="rectangle" ref="rectangle"/>
+    </bean>
+
+    <bean id="circle" class="HomeWork2.Circle" init-method="init">
+        <property name="radius" value="5"/>
+        <constructor-arg name="rectangle" ref="rectangle"/>
+        <constructor-arg name="triangle" ref="triangle"/>
+    </bean>
+
 </beans>

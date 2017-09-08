@@ -1,6 +1,6 @@
 package HomeWork2;
 
-public class Rectangle implements CalculateAreaOfTheFigure {
+public class Rectangle extends Figure {
     private double length;
     private double width;
 
@@ -36,7 +36,15 @@ public class Rectangle implements CalculateAreaOfTheFigure {
                 '}';
     }
 
-    public double calculateAreaOfTheFigure() {
+    public double calculateAreaOfTheFullFigure() {
         return length*width;
+    }
+
+    public double calculateAreaOfTheFigure() {
+        return calculateAreaOfTheFullFigure();
+    }
+
+    public void init(){
+        System.out.println("I’m a Rectangle");
     }
 }
