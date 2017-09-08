@@ -43,3 +43,4 @@ buildNumber.properties
 *.iml
 out
 gen
+/src/main/java/HomeWork2/TestAreaOfTheFigure.java

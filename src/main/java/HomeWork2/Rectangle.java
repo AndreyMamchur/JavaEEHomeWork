@@ -1,8 +1,8 @@
 package HomeWork2;
 
-public class Rectangle {
-    private int length;
-    private int width;
+public class Rectangle implements CalculateAreaOfTheFigure {
+    private double length;
+    private double width;
 
     public Rectangle() {
     }
@@ -12,19 +12,19 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
@@ -34,5 +34,9 @@ public class Rectangle {
                 "length=" + length +
                 ", width=" + width +
                 '}';
+    }
+
+    public double calculateAreaOfTheFigure() {
+        return length*width;
     }
 }
