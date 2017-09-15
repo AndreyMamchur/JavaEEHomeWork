@@ -1,4 +1,4 @@
-package HomeWork2;
+package homework2;
 
 public abstract class Figure {
     public abstract double calculateAreaOfTheFullFigure();

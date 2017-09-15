@@ -1,4 +1,4 @@
-package HomeWork2;
+package homework2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,10 +18,7 @@ public class App {
         listOfFigure.add(triangle);
         listOfFigure.add(circle);
 
-        double sumOfAllFigure = 0;
-        for (Figure figure : listOfFigure) {
-            sumOfAllFigure += figure.calculateAreaOfTheFigure();
-        }
+        double sumOfAllFigure = listOfFigure.stream().mapToDouble(Figure::calculateAreaOfTheFigure).sum();
 
         System.out.format("Sum of all figure is %.2f%n", sumOfAllFigure);
         System.out.format("Area of circle is %.2f%n", circle.calculateAreaOfTheFullFigure());

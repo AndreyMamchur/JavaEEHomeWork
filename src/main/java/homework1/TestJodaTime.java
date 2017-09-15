@@ -1,4 +1,4 @@
-package HomeWork1;
+package homework1;
 
 import org.joda.time.LocalDate;
 
