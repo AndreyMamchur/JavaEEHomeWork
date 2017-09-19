@@ -29,6 +29,24 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
+    public List<Goods> getGoodsByName(String name) {
+        String sql = "SELECT * FROM goods WHERE name=?";
+        return jdbcTemplate.query(sql, new GoodsMapper(), name);
+    }
+
+    @Override
+    public List<Goods> getGoodsByPrice(double price) {
+        String sql = "SELECT * FROM goods WHERE price=?";
+        return jdbcTemplate.query(sql, new GoodsMapper(), price);
+    }
+
+    @Override
+    public List<Goods> getGoodsByMerchant(String merchant) {
+        String sql = "SELECT * FROM goods WHERE merchant=?";
+        return jdbcTemplate.query(sql, new GoodsMapper(), merchant);
+    }
+
+    @Override
     public Goods update(Goods newGoods) {
         String sql = "UPDATE goods SET name=?, price=?,merchant=? WHERE id=?";
         int update = jdbcTemplate.update(sql, newGoods.getName(), newGoods.getPrice(), newGoods.getMerchant(), newGoods.getId());

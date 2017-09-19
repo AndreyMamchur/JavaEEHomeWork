@@ -9,6 +9,12 @@ public interface GoodsDao {
 
     Goods getGoodsById(int id);
 
+    List<Goods> getGoodsByName(String name);
+
+    List<Goods> getGoodsByPrice(double price);
+
+    List<Goods> getGoodsByMerchant(String merchant);
+
     Goods update(Goods newGoods);
 
     List<Goods> getAll();
