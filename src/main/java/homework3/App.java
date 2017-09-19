@@ -15,8 +15,8 @@ public class App {
         Goods goods = new Goods();
         goods.setName("iPhone 7");
         goods.setPrice(18999);
-        goods.setMerchant("Apple");
-     //   goodsService.save(goods);
+        goods.setMerchant("APPLE");
+        goodsService.save(goods);
      //   goodsService.delete(10);
         List<Goods> allGoods = goodsService.getAll();
         allGoods.forEach(System.out::println);

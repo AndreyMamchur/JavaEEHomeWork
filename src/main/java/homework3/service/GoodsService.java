@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GoodsService {
 
-    boolean checkForAMatchInDataBase(String name, double price);
+    int checkForAMatchInDataBase(String name, double price);
 
     boolean dataValidation (Goods goods);
 

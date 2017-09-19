@@ -12,14 +12,14 @@ public class GoodsServiceImpl implements GoodsService {
     private GoodsDao goodsDao;
 
     @Override
-    public boolean checkForAMatchInDataBase(String name, double price) {
+    public int checkForAMatchInDataBase(String name, double price) {
         List<Goods> goodsByName = goodsDao.getGoodsByName(name);
         for (Goods goods : goodsByName){
             if (price == goods.getPrice()) {
-                return true;
+                return goods.getId();
             }
         }
-        return false;
+        return 0;
     }
 
     @Override
@@ -64,7 +64,9 @@ public class GoodsServiceImpl implements GoodsService {
             System.out.println("incorrect data entered");
             return;
         }
-        if (checkForAMatchInDataBase(goods.getName(), goods.getPrice())){
+        int id = checkForAMatchInDataBase(goods.getName(), goods.getPrice());
+        if (id>0){
+            goods.setId(id);
             goodsDao.update(goods);
         } else {
             goodsDao.save(goods);
