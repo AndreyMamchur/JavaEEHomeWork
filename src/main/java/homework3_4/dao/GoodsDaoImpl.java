@@ -1,7 +1,7 @@
-package homework3.dao;
+package homework3_4.dao;
 
-import homework3.entity.Goods;
-import homework3.mappers.GoodsMapper;
+import homework3_4.entity.Goods;
+import homework3_4.mappers.GoodsMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;

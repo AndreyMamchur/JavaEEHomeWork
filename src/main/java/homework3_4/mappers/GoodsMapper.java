@@ -1,6 +1,6 @@
-package homework3.mappers;
+package homework3_4.mappers;
 
-import homework3.entity.Goods;
+import homework3_4.entity.Goods;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

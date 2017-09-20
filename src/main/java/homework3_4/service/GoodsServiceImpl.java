@@ -1,7 +1,7 @@
-package homework3.service;
+package homework3_4.service;
 
-import homework3.dao.GoodsDao;
-import homework3.entity.Goods;
+import homework3_4.dao.GoodsDao;
+import homework3_4.entity.Goods;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

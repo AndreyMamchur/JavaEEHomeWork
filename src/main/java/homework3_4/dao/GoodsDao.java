@@ -1,6 +1,6 @@
-package homework3.dao;
+package homework3_4.dao;
 
-import homework3.entity.Goods;
+import homework3_4.entity.Goods;
 
 import java.util.List;
 

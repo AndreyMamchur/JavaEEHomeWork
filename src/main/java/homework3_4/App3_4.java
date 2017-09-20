@@ -1,14 +1,14 @@
-package homework3;
+package homework3_4;
 
-import homework3.config.SpringConfig;
-import homework3.entity.Goods;
-import homework3.service.GoodsService;
+import homework3_4.config.SpringConfig;
+import homework3_4.entity.Goods;
+import homework3_4.service.GoodsService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
-public class App {
+public class App3_4 {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         GoodsService goodsService = context.getBean(GoodsService.class);

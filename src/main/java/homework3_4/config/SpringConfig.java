@@ -1,7 +1,7 @@
-package homework3.config;
+package homework3_4.config;
 
-import homework3.dao.GoodsDaoImpl;
-import homework3.service.GoodsServiceImpl;
+import homework3_4.dao.GoodsDaoImpl;
+import homework3_4.service.GoodsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;

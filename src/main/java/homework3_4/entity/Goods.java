@@ -1,4 +1,4 @@
-package homework3.entity;
+package homework3_4.entity;
 
 public class Goods {
     private int id;
