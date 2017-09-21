@@ -5,9 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-
-<h1>Hello world!!!</h1>
-<a href="/allGoods">All Goods</a>
+<#include "WEB-INF/views/templates/header.ftl">
+<div class="container">
+    <h1>The best app ever!</h1>
+</div>
 
 </body>
 </html>

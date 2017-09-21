@@ -13,6 +13,8 @@
 <h2>GoodsPrice = ${goods.price}</h2>
 <h2>GoodsMerchant = ${goods.merchant}</h2>
 
+
+<br/>
 <a href="/allGoods"> Back </a>
 </body>
 </html>

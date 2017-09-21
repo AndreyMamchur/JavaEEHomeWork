@@ -9,6 +9,10 @@ public class Goods {
     public Goods() {
     }
 
+    public Goods(int id) {
+        this.id = id;
+    }
+
     public Goods(int id, String name, double price, String merchant) {
         this.id = id;
         this.name = name;

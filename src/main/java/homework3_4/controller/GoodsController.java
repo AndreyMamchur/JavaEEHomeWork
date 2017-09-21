@@ -14,6 +14,11 @@ public class GoodsController {
     @Autowired
     private GoodsService goodsService;
 
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
     @GetMapping("/goods/{id}")
     public String getGoods(@PathVariable("id") int id, Model model){
         Goods goodsById = goodsService.getById(id);
@@ -41,5 +46,11 @@ public class GoodsController {
     public String newGoods(@ModelAttribute Goods goods){
         goodsService.save(goods);
         return "redirect:allGoods";
+    }
+
+    @PostMapping("/deleteGoods")
+    public String deleteGoods(@ModelAttribute("id") int id){
+        goodsService.delete(id);
+        return "redirect:/allGoods";
     }
 }
